@@ -2,10 +2,12 @@ package fr.univtln.serverclient.model;
 
 import java.io.Serializable;
 
+import lombok.Data;
+
 /**
  * Created by damienlemenager on 23/11/2017.
  */
-
+@Data
 public class Job implements Serializable {
 
     private int id;

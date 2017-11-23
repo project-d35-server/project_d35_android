@@ -4,10 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+
 /**
  * Created by damienlemenager on 23/11/2017.
  */
-
+@Data
 public class Profile implements Serializable {
 
     private int id;
@@ -19,6 +21,8 @@ public class Profile implements Serializable {
     private List<Job> jobs = new ArrayList<>();
 
     private int age;
+
+    private int taxes;
 
     public Profile() {
     }
@@ -60,16 +64,6 @@ public class Profile implements Serializable {
             return new Profile(this);
         }
     }
-
-    public int getTaxes() {
-        int countTaxes = 0;
-        /*for (Job job :
-                jobs) {
-            countTaxes += job.getSalary()/10;
-        }*/
-        return countTaxes;
-    }
-
 
 
 }
