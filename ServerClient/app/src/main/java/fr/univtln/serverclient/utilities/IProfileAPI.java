@@ -14,9 +14,9 @@ import fr.univtln.serverclient.model.Profile;
  */
 
 // On Emulator
-//@Rest(rootUrl = "http://10.0.2.2:8080/server/api", converters = {MappingJackson2HttpMessageConverter.class, StringHttpMessageConverter.class})
+@Rest(rootUrl = "http://10.0.2.2:8080/server/api", converters = {MappingJackson2HttpMessageConverter.class, StringHttpMessageConverter.class})
 // On device connect via USB for my wireless connection
-@Rest(rootUrl = "http://192.168.43.114:8080/server/api", converters = {MappingJackson2HttpMessageConverter.class, StringHttpMessageConverter.class})
+//@Rest(rootUrl = "http://192.168.43.114:8080/server/api", converters = {MappingJackson2HttpMessageConverter.class, StringHttpMessageConverter.class})
 public interface IProfileAPI {
 
     @Get("/profiles")

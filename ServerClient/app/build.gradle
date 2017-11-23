@@ -30,7 +30,7 @@ android {
 }
 
 apply plugin: 'com.android.application'
-def AAVersion = '4.3.0'
+def AAVersion = '4.3.1'
 
 dependencies {
 
