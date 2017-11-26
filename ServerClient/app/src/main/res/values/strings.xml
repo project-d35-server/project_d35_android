@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ServerClient</string>
+    <string name="title_name">Gestionnaire d\'impôts</string>
+    <string name="consult_profiles">Consulter les profils</string>
+    <string name="create_profiles">Créer un profil</string>
+    <string name="surname_profile">Nom : </string>
+    <string name="name_profile">Prénom : </string>
+    <string name="age_profile">Âge : </string>
+    <string name="create">Créer</string>
+    <string name="job">Métier(s) : </string>
 </resources>

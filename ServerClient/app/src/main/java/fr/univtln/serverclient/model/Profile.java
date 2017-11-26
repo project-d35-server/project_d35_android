@@ -1,5 +1,7 @@
 package fr.univtln.serverclient.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,7 @@ public class Profile implements Serializable {
 
     private int age;
 
+    @JsonIgnore
     private int taxes;
 
     public Profile() {
