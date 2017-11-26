@@ -8,4 +8,7 @@
     <string name="age_profile">Âge : </string>
     <string name="create">Créer</string>
     <string name="job">Métier(s) : </string>
+    <string name="calculate_taxes">Calculer impôts</string>
+    <string name="remove_profile">Supprimer profil</string>
+    <string name="management_profile">Gestion du profil</string>
 </resources>
