@@ -13,4 +13,5 @@
     <string name="management_profile">Gestion du profil</string>
     <string name="euros_mois">€/mois</string>
     <string name="taxes">Impôts : </string>
+    <string name="click_to_consult_profile">Cliquer sur profile pour consulter ses informations. </string>
 </resources>
