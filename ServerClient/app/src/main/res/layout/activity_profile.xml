@@ -10,42 +10,51 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/management_profile"/>
+        android:text="@string/management_profile"
+        android:layout_gravity="center"/>
        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-           android:hint="@string/surname_profile"/>
+           android:hint="@string/surname_profile"
+           android:id="@+id/tv_surname"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/name_profile"/>
+        android:hint="@string/name_profile"
+        android:id="@+id/tv_name"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/age_profile"/>
+        android:hint="@string/age_profile"
+        android:id="@+id/tv_age"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/job"/>
+        android:hint="@string/job" />
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:id="@+id/ll_jobs2">
   </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/calculate_taxes"/>
+        android:text="@string/calculate_taxes"
+        android:id="@+id/b_calculate_taxes"/>
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_taxes"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/remove_profile"/>
+        android:text="@string/remove_profile"
+        android:id="@+id/b_remove_profile"/>
 
 
 </LinearLayout>

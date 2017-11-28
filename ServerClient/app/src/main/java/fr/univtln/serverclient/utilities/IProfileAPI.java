@@ -1,8 +1,10 @@
 package fr.univtln.serverclient.utilities;
 
 import org.androidannotations.rest.spring.annotations.Body;
+import org.androidannotations.rest.spring.annotations.Delete;
 import org.androidannotations.rest.spring.annotations.Get;
 import org.androidannotations.rest.spring.annotations.Header;
+import org.androidannotations.rest.spring.annotations.Path;
 import org.androidannotations.rest.spring.annotations.Post;
 import org.androidannotations.rest.spring.annotations.Rest;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +32,14 @@ public interface IProfileAPI {
 
     @Post("/profiles")
     @Header(name = "Content-Type", value = "application/json")
-    void persist(@Body Profile profile);
+    Profile persist(@Body Profile profile);
+
+    @Get("/profiles/{id}")
+    Profile getProfile(@Path long id);
+
+    @Delete("/profiles/{id}")
+    @Header(name = "Content-Type", value = "application/json")
+    void remove(@Path long id);
+
 
 }
