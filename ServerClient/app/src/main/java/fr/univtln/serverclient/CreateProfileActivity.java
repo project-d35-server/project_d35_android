@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.NetworkOnMainThreadException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +78,7 @@ public class CreateProfileActivity extends AppCompatActivity {
                         EditText editText=new EditText(getCreateProfileActivity());
                         LinearLayout.LayoutParams editTextParams=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
                         editText.setLayoutParams(editTextParams);
+                        editText.setInputType(InputType.TYPE_CLASS_NUMBER);
                         linearLayout.addView(editText);
                         TextView textView2=new TextView(getCreateProfileActivity());
                         textView2.setText(getString(R.string.euros_mois));
@@ -96,6 +98,7 @@ public class CreateProfileActivity extends AppCompatActivity {
                             textView.setText(checkBox1.getText().toString());
                             linearLayout.addView(textView);
                             EditText editText=new EditText(getCreateProfileActivity());
+                            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
                             LinearLayout.LayoutParams editTextParams=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, 1f);
                             editText.setLayoutParams(editTextParams);
                             linearLayout.addView(editText);
