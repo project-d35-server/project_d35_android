@@ -31,33 +31,28 @@ import fr.univtln.serverclient.utilities.IProfileAPI_;
 @EActivity(R.layout.activity_create_profile)
 public class CreateProfileActivity extends AppCompatActivity {
 
-    private static final String STR_EURO_MOIS="€/mois";
+
 
     @ViewById(R.id.ll_jobs)
-    private LinearLayout ll_jobs;
+     LinearLayout ll_jobs;
 
     @ViewById(R.id.ll_salaries)
-    private  LinearLayout ll_salaries;
-    private List<CheckBox> checkBoxesJobs;
+      LinearLayout ll_salaries;
+     List<CheckBox> checkBoxesJobs;
 
     @ViewById(R.id.e_surname)
-    private EditText e_surname;
+     EditText e_surname;
 
     @ViewById(R.id.e_name)
-   private EditText e_name;
+   EditText e_name;
 
     @ViewById(R.id.e_age)
-    private EditText e_age;
+     EditText e_age;
 
    private List<EditText> editTextsSalaries;
 
     private IProfileAPI iProfileAPI;
 
-
-    @Background
-    public void persist(Profile profile){
-        iProfileAPI.persist(profile);
-    }
 
     @AfterViews
     public void init(){
@@ -84,7 +79,7 @@ public class CreateProfileActivity extends AppCompatActivity {
                         editText.setLayoutParams(editTextParams);
                         linearLayout.addView(editText);
                         TextView textView2=new TextView(getCreateProfileActivity());
-                        textView2.setText(STR_EURO_MOIS);
+                        textView2.setText(getString(R.string.euros_mois));
                         linearLayout.addView(textView2);
                         ll_salaries.addView(linearLayout);
                         editTextsSalaries.add(editText);
@@ -105,7 +100,7 @@ public class CreateProfileActivity extends AppCompatActivity {
                             editText.setLayoutParams(editTextParams);
                             linearLayout.addView(editText);
                             TextView textView2=new TextView(getCreateProfileActivity());
-                            textView2.setText(STR_EURO_MOIS);
+                            textView2.setText(getString(R.string.euros_mois));
                             linearLayout.addView(textView2);
                             ll_salaries.addView(linearLayout);
                             editTextsSalaries.add(editText);
@@ -139,9 +134,7 @@ public class CreateProfileActivity extends AppCompatActivity {
         profileBuilder.setJobs(jobs2);
         Profile profile=profileBuilder.build();
         persist(profile);
-        getProfileResult();
-        Intent intent=new Intent(this, ProfileActivity_.class);
-        startActivity(intent);
+
     }
 
     @Background
@@ -150,4 +143,17 @@ public class CreateProfileActivity extends AppCompatActivity {
 
         Log.d("test","str : "+response);
     }
+
+    @Background
+    public void persist(Profile profile){
+        Profile profile1= iProfileAPI.persist(profile);
+        updateView(profile1);
+    }
+
+
+   public void updateView(Profile profile){
+       Intent intent=new Intent(this, ProfileActivity_.class);
+       intent.putExtra("profile",profile);
+       startActivity(intent);
+   }
 }

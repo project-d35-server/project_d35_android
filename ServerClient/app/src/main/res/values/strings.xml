@@ -3,12 +3,14 @@
     <string name="title_name">Gestionnaire d\'impôts</string>
     <string name="consult_profiles">Consulter les profils</string>
     <string name="create_profiles">Créer un profil</string>
-    <string name="surname_profile">Nom : </string>
-    <string name="name_profile">Prénom : </string>
-    <string name="age_profile">Âge : </string>
+    <string name="surname_profile">Nom :</string>
+    <string name="name_profile">Prénom :</string>
+    <string name="age_profile">Âge :</string>
     <string name="create">Créer</string>
     <string name="job">Métier(s) : </string>
     <string name="calculate_taxes">Calculer impôts</string>
     <string name="remove_profile">Supprimer profil</string>
     <string name="management_profile">Gestion du profil</string>
+    <string name="euros_mois">€/mois</string>
+    <string name="taxes">Impôts : </string>
 </resources>
