@@ -76,4 +76,8 @@ public class Profile implements Serializable {
         return countTaxes;
     }
 
+    @Override
+    public String toString() {
+        return surname+" "+name;
+    }
 }
