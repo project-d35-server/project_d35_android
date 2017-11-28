@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
      */
     @Click(R.id.b_retrieve_profile)
     void retrieveProfiles(View view) {
-        getProfileResult();
-        Toast.makeText(this," Coucou ", Toast.LENGTH_LONG).show();
+        Intent intent=new Intent(this, SearchProfilesActivity_.class);
+        startActivity(intent);
 
     }
 
