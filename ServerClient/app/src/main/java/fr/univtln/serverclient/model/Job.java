@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class Job implements Serializable {
 
-    private int id;
+    private long id;
 
     private int salary;
 

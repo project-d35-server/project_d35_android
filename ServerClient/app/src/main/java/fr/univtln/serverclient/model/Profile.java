@@ -14,7 +14,7 @@ import lombok.Data;
 @Data
 public class Profile implements Serializable {
 
-    private int id;
+    private long id;
 
     private String name;
 
@@ -67,6 +67,13 @@ public class Profile implements Serializable {
             return new Profile(this);
         }
     }
-
+    public int getTaxes() {
+        int countTaxes = 0;
+        for (Job job :
+                jobs) {
+            countTaxes += job.getSalary()/10;
+        }
+        return countTaxes;
+    }
 
 }
