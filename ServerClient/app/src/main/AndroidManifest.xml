@@ -18,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateProfileActivity_" />
+        <activity android:name=".ProfileActivity_" />
+        <activity android:name=".SearchProfilesActivity_"></activity>
     </application>
 
 </manifest>

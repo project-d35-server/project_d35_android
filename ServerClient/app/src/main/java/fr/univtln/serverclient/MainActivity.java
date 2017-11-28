@@ -1,5 +1,6 @@
 package fr.univtln.serverclient;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,11 +39,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
     @Click(R.id.b_retrieve_profile)
-    void onClick(View view) {
+    void retrieveProfiles(View view) {
         getProfileResult();
         Toast.makeText(this," Coucou ", Toast.LENGTH_LONG).show();
 
+    }
+     */
+    @Click(R.id.b_retrieve_profile)
+    void retrieveProfiles(View view) {
+        Intent intent=new Intent(this, SearchProfilesActivity_.class);
+        startActivity(intent);
+
+    }
+
+    @Click(R.id.b_create_profile)
+    void createProfiles(View view) {
+       Intent intent=new Intent(this, CreateProfileActivity_.class);
+       startActivity(intent);
     }
 
     @Background
